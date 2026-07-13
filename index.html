@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JsP</title>
+    </head>
+    <style>
+        body{
+            background-color: rgb(0, 0, 0);
+            overflow: hidden;
+        }
+        .Btn{
+            width: 200px;
+            height: 200px;
+            position: fixed;
+            border-radius: 30px;
+        }
+        #btn1{
+            left: 400px;
+            top: 250px;
+        }
+        #btn2{
+            left: 600px;
+            top: 250px;
+        }
+        #btn3{
+            left: 400px;
+            top: 450px;
+        }
+        #btn4{
+            left: 600px;
+            top: 450px;
+        }
+
+        #btn5{
+            right: 400px;
+            top: 250px;
+        }
+        #btn6{
+            right: 600px;
+            top: 250px;
+        }
+        #btn7{
+            right: 400px;
+            top: 450px;
+        }
+        #btn8{
+            right: 600px;
+            top: 450px;
+        }
+        #what{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color:rgb(255, 255, 255);
+            border : 2px solid red
+        }
+        #ok{
+            width: 100px;
+            height: 100px;
+        }
+   </style>
+   
+    <body id="box">
+            <div id="notes">
+            <button id="btn1" class="Btn">W</button>
+
+            <button id="btn2" class="Btn">E</button>
+
+            <button id="btn3" class="Btn">S</button>
+
+            <button id="btn4" class="Btn">D</button>
+
+            <button id="btn5" class="Btn">I</button>
+
+            <button id="btn6" class="Btn">O</button>
+
+            <button id="btn7" class="Btn">K</button>
+
+            <button id="btn8" class="Btn">L</button>
+</div>
+<div id="what">
+    <h1>Notes keybinds:<br>Left side:WESD RightSide:IOKL </h1>
+    <h2>Warning : This website needs a keyboard to run</h2>
+    <button id="ok">Ok</button>
+</div>
+    <script>
+        const divNotes = document.getElementById("notes")
+        const divWhat = document.getElementById("what")
+        const ok = document.getElementById("ok");
+        divNotes.style.display = "none"
+                divWhat.style.display = "flex"
+        const clickSound1 = new Audio("snd1.wav");
+        const clickSound2 = new Audio("snd2.wav");
+        const clickSound3 = new Audio("snd3.wav");
+        const clickSound4 = new Audio("snd4.wav");
+        const clickSound5 = new Audio("snd5.wav");
+        const clickSound6 = new Audio("snd6.wav");
+        const clickSound7 = new Audio("snd7.wav");
+        const clickSound8 = new Audio("snd8.wav");
+        const btn1 = document.getElementById("btn1");
+        const btn2 = document.getElementById("btn2");
+        const btn3 = document.getElementById("btn3");
+        const btn4 = document.getElementById("btn4");
+        const btn5 = document.getElementById("btn5");
+        const btn6 = document.getElementById("btn6");
+        const btn7 = document.getElementById("btn7");
+        const btn8 = document.getElementById("btn8");
+
+
+
+        document.addEventListener("keydown",function(event){
+            if(event.code === "KeyW"){
+                clickSound1.play();
+                clickSound1.currentTime = 0;
+btn1.style.backgroundColor = "red"
+        }});
+                document.addEventListener("keydown",function(event){
+            if(event.code === "KeyO"){
+                clickSound8.play();
+                clickSound8.currentTime = 0;
+btn5.style.backgroundColor = "red"
+        }});
+                document.addEventListener("keydown",function(event){
+            if(event.code === "KeyE"){
+                clickSound2.play();
+                clickSound2.currentTime = 0;
+btn2.style.backgroundColor = "blue"
+        }});
+                document.addEventListener("keydown",function(event){
+            if(event.code === "KeyI"){
+                clickSound3.play();
+                clickSound3.currentTime = 0;
+btn6.style.backgroundColor = "blue"
+        }});
+                document.addEventListener("keydown",function(event){
+            if(event.code === "KeyS"){
+                clickSound4.play();
+                clickSound4.currentTime = 0;
+btn3.style.backgroundColor = "yellow"
+        }});
+                document.addEventListener("keydown",function(event){
+            if(event.code === "KeyL"){
+                clickSound5.play();
+                clickSound5.currentTime = 0;
+btn7.style.backgroundColor = "yellow"
+        }});
+                document.addEventListener("keydown",function(event){
+            if(event.code === "KeyD"){
+                clickSound6.play();
+                clickSound6.currentTime = 0;
+btn4.style.backgroundColor = "green"
+        }});
+                document.addEventListener("keydown",function(event){
+            if(event.code === "KeyK"){
+                clickSound7.play();
+                clickSound7.currentTime = 0;
+btn8.style.backgroundColor = "green"
+        }});
+
+        ok.onclick = function(){
+                    divNotes.style.display = "block"
+                divWhat.style.display = "none"
+        }
+
+
+
+
+
+</script>
+</body>
+</html>
